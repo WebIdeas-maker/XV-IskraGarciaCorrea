@@ -12,7 +12,7 @@
 			name="keywords"
 			content="invitaciones, digitales, tarjetas, boda, invitación, interactivas, casamiento, save the date, agenda la fecha, ideas invitación, tarjetas de 15, tarjetas eventos, wedding, matrimonio, ideas tarjetas, rsvp, modelos de invitacion, página de boda, página web de casamiento"
 		/>
-		<title>Mis 15 - Mavi</title>
+		<title>Mis XV - Iskra</title>
 		<link rel="shortcut icon" href="assets/img/logo_mavi.png" />
 		<link rel="stylesheet" href="assets/css/first_animation.css" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -21,6 +21,8 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="assets/css/styles.css" />
+		<!-- Carga de ajustes personalizados para alinear los títulos de portada -->
+		<link rel="stylesheet" href="assets/css/custom.css" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;900&amp;display=swap"
 			rel="stylesheet"
@@ -67,7 +69,8 @@
 		<div class="letter">
 			<div class="sticky_effect">
 				<div class="letter_content">
-					<div class="div_svg div_marco">
+					\1
+<div class="div_svg div_marco">
 						<svg
 							width="100%"
 							height="100%"
@@ -122,33 +125,13 @@
 							></rect>
 						</svg>
 					</div>
-					<div class="div_svg div_nombre_mavi">
-						<svg
-							width="100%"
-							height="100%"
-							xmlns:dc="http://purl.org/dc/elements/1.1/"
-							xmlns:cc="http://creativecommons.org/ns#"
-							xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-							xmlns:svg="http://www.w3.org/2000/svg"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<use xlink:href="#nombre_mavi"></use>
-						</svg>
-					</div>
-					<div class="div_svg div_mis_quince">
-						<svg
-							width="100%"
-							height="100%"
-							xmlns:dc="http://purl.org/dc/elements/1.1/"
-							xmlns:cc="http://creativecommons.org/ns#"
-							xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-							xmlns:svg="http://www.w3.org/2000/svg"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<use xlink:href="#mis_quinces"></use>
-						</svg>
-					</div>
-					<svg
+<div class="div_svg brand-wrap" aria-label="Títulos portada">
+  <span class="brand brand--iskra" aria-label="Iskra">Iskra</span>
+  <span class="brand brand--misxv" aria-label="Mis XV">Mis XV</span>
+  <!-- Adorno floral inspirado en el pastel. Utiliza un SVG vectorial para mantener la nitidez en todas las resoluciones. -->
+  <img class="adornment" src="assets/img/vine-decoration.svg" alt="Decoración de enredadera" />
+</div>
+<svg
 						transform-box="fill-box"
 						fill="none"
 						stroke="#ffffff"
@@ -341,21 +324,43 @@
 							</div>
 						</section>
 						<section id="5">
-							<div class="line"></div>
-							<header>¿Qué canciones no pueden faltar?</header>
-							<p>
-								¡Ayudame sugiriendo las canciones que pensás que no pueden
-								faltar en la fiesta!
-							</p>
-							<div class="espacio_btn">
-								<a
-									target="_blank"
-									href="https://docs.google.com/forms/d/e/1FAIpQLSeM0KBnVegaXkv2ihc1eULrEnPTovaDA69geDt26urtilnQtA/viewform?usp=sf_link"
-									class="btn"
-									>Sugerir canción</a
-								>
-							</div>
-						</section>
+  <div class="line"></div>
+  <header>Lluvia de sobres</header>
+  <p class="s5-lead">
+    Si deseas acompañarnos con un detalle, puedes hacerlo de manera digital.
+    Toca el sobre para ver los datos del beneficiario y copia el número de cuenta.
+  </p>
+
+  
+<div class="sobre-lluvia s5-card" data-nombre="Nombre Apellido" data-cuenta="0000 0000 0000 0000">
+    <!-- Control CSS-only -->
+    <input type="checkbox" id="s5-toggle" class="s5-toggle" />
+    
+        <!-- Decoración: lluvia de sobres (CSS-only) -->
+    <div class="envelope-rain" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+<div class="s5-center">
+      <label for="s5-toggle" class="btn btn-sobre only-icon s5-btn" aria-label="Ver datos bancarios">
+        <span class="icon-envelope" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" focusable="false">
+            <path d="M3 6h18a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm0 2v.2l9 5.4 9-5.4V8L12 13 3 8z"></path>
+          </svg>
+        </span>
+      </label>
+    </div>
+
+    <!-- Panel rosa (CSS fade) -->
+    <div class="s5-panel" aria-live="polite">
+      <p class="sobre-titular"><strong>Titular:</strong> <span id="sobre-nombre">Nombre Apellido</span></p>
+      <p class="sobre-cuenta">
+        <strong>Cuenta:</strong> <code id="cuenta-num">0000 0000 0000 0000</code> <button type="button" class="s5-copy" aria-label="Copiar número de cuenta">Copiar</button>
+      </p>
+      <p class="sobre-nota">Gracias por tu cariño y acompañarnos en este día tan especial.</p>
+    </div>
+  </div>
+</section>
 					</div>
 				</div>
 				<nav>
@@ -392,5 +397,7 @@
 			type="text/javascript"
 			src="assets/js/jquery.fancybox.min.js"
 		></script>
-	</body>
+	    <script type="text/javascript" src="assets/js/s5-lluvia.js" defer></script>
+</body>
 </html>
+
