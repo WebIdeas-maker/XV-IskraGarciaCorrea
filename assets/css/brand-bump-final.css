@@ -1,0 +1,22 @@
+
+/* Final bump: make 'Iskra' and 'Mis XV' a bit larger and slightly wider */
+.brand--iskra, [data-brand="iskra"]{
+  transform: scale(1.08);
+  transform-origin: center;
+  letter-spacing: .02em;
+}
+.brand--misxv, [data-brand="misxv"]{
+  transform: scale(1.10);
+  transform-origin: center;
+  letter-spacing: .025em;
+}
+
+/* Subtle mobile font-size increase without breaking layout */
+@media (max-width: 480px){
+  .brand--iskra, [data-brand="iskra"]{ font-size: clamp(84px, 21vw, 205px) !important; }
+  .brand--misxv, [data-brand="misxv"]{ font-size: clamp(72px, 18vw, 190px) !important; }
+}
+@media (min-width: 481px) and (max-width: 768px){
+  .brand--iskra, [data-brand="iskra"]{ font-size: clamp(96px, 19vw, 210px) !important; }
+  .brand--misxv, [data-brand="misxv"]{ font-size: clamp(80px, 16.5vw, 198px) !important; }
+}
