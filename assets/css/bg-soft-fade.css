@@ -1,0 +1,4 @@
+
+/* Smooth background reveal without zoom */
+body:not(.bg-loaded) .imgPortada{ opacity: 0 !important; }
+body.bg-loaded .imgPortada{ opacity: 1 !important; transition: opacity .6s ease; }
