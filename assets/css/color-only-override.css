@@ -1,0 +1,190 @@
+
+/* === COLOR-ONLY OVERRIDE (no layout changes) === */
+
+/* Section 5 (Lluvia de sobres): remap local theme variables */
+section[id="5"]{
+  --s5-pink: #A2BEAB;          /* use sage green */
+  --s5-pink-strong: #8FB9A3;   /* hover/dark */
+  --s5-green: #A2BEAB;         /* unify greens */
+  --s5-cream-1: #DCCCA3;       /* gold cream (titles) */
+  --s5-cream-2: #F2EDD9;       /* light cream */
+  --s5-text: #FFFFFF;          /* default text color inside card */
+  --s5-dash: #E9E3CC;          /* dashed accent */
+}
+
+/* Open card: titles in cream; body text white (only color, no spacing changes) */
+section[id="5"] .s5-open h1,
+section[id="5"] .s5-open h2,
+section[id="5"] .s5-open h3,
+section[id="5"] .s5-open .title{ color: var(--s5-cream-1) !important; }
+section[id="5"] .s5-open,
+section[id="5"] .s5-open p,
+section[id="5"] .s5-open li,
+section[id="5"] .s5-open span{ color: var(--s5-text) !important; }
+
+/* Buttons/inputs/chips inside the open card: keep original shape, only colors */
+section[id="5"] .s5-open .chip,
+section[id="5"] .s5-open .badge,
+section[id="5"] .s5-open .field,
+section[id="5"] .s5-open [class*="cuenta" i],
+section[id="5"] .s5-open [class*="clabe" i],
+section[id="5"] .s5-open [class*="account" i],
+section[id="5"] .s5-open code,
+section[id="5"] .s5-open .tag{
+  color: var(--s5-text) !important;
+  background: rgba(255,255,255,.18) !important;
+  border-color: rgba(255,255,255,.38) !important;
+}
+
+/* "Copiar"/botones dentro de la card: texto blanco, leve overlay */
+section[id="5"] .s5-open .btn,
+section[id="5"] .s5-open a.btn,
+section[id="5"] .s5-open button{
+  color: var(--s5-text) !important;
+  background: rgba(255,255,255,.14) !important;
+  border-color: rgba(255,255,255,.34) !important;
+}
+section[id="5"] .s5-open .btn:hover,
+section[id="5"] .s5-open button:hover{
+  background: rgba(255,255,255,.22) !important;
+  border-color: rgba(255,255,255,.50) !important;
+}
+
+/* Closed bar + label: keep shape/spacing; make existing icon white */
+section[id="5"] .s5-closed,
+section[id="5"] label.s5-rect-card{
+  /* only color; no padding/margins edited here */
+  color: #fff !important;
+  border-color: #8FB9A3 !important;
+  background-color: #A2BEAB !important;
+}
+section[id="5"] .s5-closed svg,
+section[id="5"] .s5-closed img,
+section[id="5"] label.s5-rect-card svg,
+section[id="5"] label.s5-rect-card img{
+  filter: brightness(0) invert(1) !important; opacity: .95;
+}
+
+/* Confetti & envelope rain -> green/cream only */
+section[id="5"] .envelope-rain *, 
+section[id="5"] .confetti, 
+section[id="5"] .confetti-piece, 
+section[id="5"] .paper, 
+section[id="5"] .square, 
+section[id="5"] .piece{
+  background-color: #A2BEAB !important; border-color: #A2BEAB !important;
+}
+section[id="5"] .envelope-rain *:nth-child(2n),
+section[id="5"] .confetti:nth-child(2n), 
+section[id="5"] .confetti-piece:nth-child(2n), 
+section[id="5"] .paper:nth-child(2n), 
+section[id="5"] .square:nth-child(2n), 
+section[id="5"] .piece:nth-child(2n){
+  background-color: #DCCCA3 !important; border-color: #DCCCA3 !important;
+}
+
+/* Nav numbers: text-only by default; green fill only when active */
+.myLink span, .myLink a, .myLink .num{
+  background: transparent !important; border: none !important; box-shadow: none !important;
+  color: #A2BEAB !important;
+}
+.myLink .active, .myLink .current, .myLink .is-active, .myLink [aria-current="true"]{
+  background: rgba(162,190,171,.35) !important;
+  color:#fff !important;
+  border-radius:6px; padding:2px 6px;
+  transition: background-color .3s ease;
+}
+
+/* Footer signature stays text-only */
+.myLink a{ background: transparent !important; border: none !important; box-shadow:none !important; }
+
+
+/* === WhatsApp unified green (background) + white icon === */
+:root{
+  --wa-icon: #ffffff;            /* change to #DCCCA3 for cream icon */
+}
+a[href*="wa.me"], a[href*="whatsapp"],
+.btn-whatsapp, .whatsapp, .wa, .wapp, .btn-wapp {
+  background-color: var(--accent, #A2BEAB) !important;
+  color: var(--wa-icon) !important;
+  border: 1px solid var(--accent-strong, #8FB9A3) !important;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 9999px; /* ensure circle buttons look circular */
+  min-width: 56px; min-height: 56px;
+  padding: 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+/* Icon recolor (SVG or IMG) */
+a[href*="wa.me"] svg, a[href*="whatsapp"] svg,
+.btn-whatsapp svg, .whatsapp svg, .wa svg, .wapp svg {
+  fill: var(--wa-icon) !important;
+}
+a[href*="wa.me"] img, a[href*="whatsapp"] img,
+.btn-whatsapp img, .whatsapp img, .wa img, .wapp img {
+  filter: brightness(0) invert(1) !important; /* makes icons white */
+}
+
+/* Section 2 specific WA circle (confirmar asistencia) */
+.sections > section:nth-of-type(2) a[href*="wa.me"],
+.sections > section:nth-of-type(2) a[href*="whatsapp"],
+.sections > section:nth-of-type(2) .btn-whatsapp,
+.sections > section:nth-of-type(2) .whatsapp,
+.sections > section:nth-of-type(2) .wa,
+.sections > section:nth-of-type(2) .wapp{
+  background-color: var(--accent, #A2BEAB) !important;
+  color: var(--wa-icon) !important;
+  border-color: var(--accent-strong, #8FB9A3) !important;
+}
+.sections > section:nth-of-type(2) a[href*="wa.me"] svg,
+.sections > section:nth-of-type(2) a[href*="whatsapp"] svg,
+.sections > section:nth-of-type(2) .btn-whatsapp svg,
+.sections > section:nth-of-type(2) .whatsapp svg,
+.sections > section:nth-of-type(2) .wa svg,
+.sections > section:nth-of-type(2) .wapp svg{
+  fill: var(--wa-icon) !important;
+}
+.sections > section:nth-of-type(2) a[href*="wa.me"] img,
+.sections > section:nth-of-type(2) a[href*="whatsapp"] img,
+.sections > section:nth-of-type(2) .btn-whatsapp img,
+.sections > section:nth-of-type(2) .whatsapp img,
+.sections > section:nth-of-type(2) .wa img,
+.sections > section:nth-of-type(2) .wapp img{
+  filter: brightness(0) invert(1) !important;
+}
+
+
+
+/* ==== HARD OVERRIDE: buttons back to green (MISA / FIESTA) ==== */
+:root{
+  --accent: #A2BEAB;
+  --accent-strong: #8FB9A3;
+  --pink_accent: var(--accent);   /* in case base CSS maps .btn to pink vars */
+  --pink_deeper: var(--accent-strong);
+}
+.btn, a.btn, button.btn, .button, .btn-primary, .button-primary{
+  background-color: var(--accent) !important;
+  color: #fff !important;
+  border-color: var(--accent-strong) !important;
+}
+
+/* ==== Section 5 card must be green, no pink gradient ==== */
+section[id="5"] .s5-open{
+  background: var(--s5-green, var(--accent)) !important;  /* kills gradients too */
+  background-image: none !important;
+  border-color: var(--s5-pink-strong, var(--accent-strong)) !important;
+}
+section[id="5"] .s5-closed, section[id="5"] label.s5-rect-card{
+  background: var(--s5-green, var(--accent)) !important;
+  background-image: none !important;
+  color: #fff !important;
+  border-color: var(--s5-pink-strong, var(--accent-strong)) !important;
+}
+
+/* Titles cream, body text white */
+section[id="5"] .s5-open h1, section[id="5"] .s5-open h2, section[id="5"] .s5-open h3{
+  color: var(--s5-cream-1, #DCCCA3) !important;
+}
+section[id="5"] .s5-open, section[id="5"] .s5-open p, section[id="5"] .s5-open span, section[id="5"] .s5-open li{
+  color: var(--s5-text, #fff) !important;
+}
+
