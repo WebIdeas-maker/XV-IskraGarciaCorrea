@@ -1,7 +1,0 @@
-
-/* Clean hero background — no effects, no zoom tricks */
-.imgPortada{
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-}
